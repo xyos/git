@@ -20,7 +20,7 @@ H:
 
 # Introduction to git
 
-Jean Pierre Charalambos
+by some [National University of Colombia collaborators](https://github.com/orgs/objetos/people)
 
 H:
 
