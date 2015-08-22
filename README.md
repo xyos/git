@@ -1,4 +1,4 @@
-## Visual Computing Slides -- Git
+## Object Oriented Programming Slides -- Git
 
 Part of the *Visual Computing* course given at [National University of Colombia](http://www.disi.unal.edu.co/) by [Jean Pierre Charalambos](http://otrolado.info) and [Andres Colubri](http://andrescolubri.net/).
 
