@@ -30,13 +30,133 @@ H:
  2. Getting started <!-- .element: class="fragment" data-fragment-index="2"-->
  3. Git basics <!-- .element: class="fragment" data-fragment-index="3"-->
  3. Git branching <!-- .element: class="fragment" data-fragment-index="4"-->
- 5. References <!-- .element: class="fragment" data-fragment-index="5"-->
- 6. Workshop <!-- .element: class="fragment" data-fragment-index="6"-->
+ 4. Distributed git  <!-- .element: class="fragment" data-fragment-index="5"-->
+ 5. References <!-- .element: class="fragment" data-fragment-index="6"-->
+ 6. Workshop <!-- .element: class="fragment" data-fragment-index="7"-->
  
 H:
 
 ## Introduction
 
+1. The problem
+2. Version control system types
+3. What's git?
+4. Why use git?
+
+V:
+
+## Introduction
+### The problem
+
+working on a project comprising _several source files_
+
+<figure>
+    <img height='350' src='fig/presentation.png' />
+    <figcaption>A presentation</figcaption>
+</figure>
+
+V:
+
+## Introduction
+### The problem
+
+working on a project comprising _several source files_
+
+<figure>
+    <img height='350' src='fig/book.png' />
+    <figcaption>A book</figcaption>
+</figure>
+
+
+V:
+
+## Introduction
+### The problem
+
+working on a project comprising _several source files_
+
+<figure>
+    <img height='350' src='fig/code.png' />
+    <figcaption>Any other software</figcaption>
+</figure>
+
+V:
+
+## Introduction
+### The problem
+
+and wanna keep track of history
+
+Why?
+
+V:
+
+## Introduction
+### The problem
+
+To time travel...
+
+V:
+
+## Introduction
+### The problem
+
+... in order to:
+
+1. Go back in time and recover a previous state <!-- .element: class="fragment" data-fragment-index="1"-->
+ * Undo a mistake
+ * Explore history
+ * Make edits starting there
+2. Come back to the present <!-- .element: class="fragment" data-fragment-index="2"-->
+ * _merge_ other history _branches_ 
+ * (or do it the other way around)
+ 
+V:
+
+## Introduction
+### The problem
+
+Conclusion
+
+'Creativity' (as when writting a book, coding a program) is:
+ > a non-linear iterative process of experimentation towards *an open goal*<sup>*</sup>
+
+<sup>*</sup> no matter how you do it, a goal that can anytime be _revised_ and/or broken up into _accomplishable stages_
+
+V:
+
+## Introduction
+### Version control system types
+
+<figure>
+    <img height='400' src='fig/local.png' />
+    <figcaption><a href="https://git-scm.com/book/en/v2/Getting-Started-About-Version-Control#Local-Version-Control-Systems">Local Version Control Systems</a></figcaption>
+</figure>
+
+V:
+
+## Introduction
+### Version control system types
+
+<figure>
+    <img height='400' src='fig/centralized.png' />
+    <figcaption><a href="https://git-scm.com/book/en/v2/Getting-Started-About-Version-Control#Centralized-Version-Control-Systems">centralized Version Control Systems</a></figcaption>
+</figure>
+
+V:
+
+## Introduction
+### Version control system types
+
+<figure>
+    <img height='400' src='fig/distributed.png' />
+    <figcaption><a href="https://git-scm.com/book/en/v2/Getting-Started-About-Version-Control#Distributed-Version-Control-Systems">Distributed Version Control Systems</a></figcaption>
+</figure>
+
+
+V:
+
+## Introduction
 ### What is git
 
 > Git is a [free and open source](https://git-scm.com/about/free-and-open-source) [distributed](https://en.wikipedia.org/wiki/Distributed_revision_control) [version control system](https://en.wikipedia.org/wiki/Revision_control) designed to handle everything from small to very large projects with speed and efficiency.
@@ -46,24 +166,22 @@ V:
 ## Introduction
 ### Why use git?
 
-1. Personal affairs
-2. Work into a project you like with all sorts of people from everywhere
+1. Private creativity affairs
+2. Team creativity affairs
 
 V:
 
 ## Introduction
-### Why use git? Personal affairs
+### Why use git? Private creativity affairs
 
-<li class="fragment">Whenever you wanna keep track of a personal project sources.
-Be it a novel, a program, an image, a video, etc.
-
-<li class="fragment">Whenever you wanna be creative a experiment some crazy idea
-without fearing to lose your previous work
+<li class="fragment">Whenever you wanna keep track of some project sources sequence of _main changes_
+<li class="fragment">Whenever you wanna be creative an experiment some crazy idea without fearing
+it should have been started in the past or of losing previous work
 
 V:
 
 ## Introduction
-### Why use git? Team affairs
+### Why use git? Team creativity affairs
 
 <figure>
     <img height='400' src='fig/svn_workflow.png' />
@@ -73,7 +191,7 @@ V:
 V:
 
 ## Introduction
-### Why use git? Team affairs
+### Why use git? Team creativity affairs
 
 <figure>
     <img height='400' src='fig/manager_workflow.png' />
@@ -83,20 +201,97 @@ V:
 V:
 
 ## Introduction
-### Why use git?: Team affairs
+### Why use git?: Team creativity affairs
 
 <figure>
     <img height='400' src='fig/dictator_workflow.png' />
     <figcaption><a href="https://git-scm.com/about/distributed">Dictator and Lieutenants Workflow</a></figcaption>
 </figure>
 
+V:
+
+## Introduction
+### Why use git?: Team creativity affairs
+
+<figure>
+    <img height='400' src='fig/pull_request.png' />
+    <figcaption><a href="https://help.github.com/articles/using-pull-requests/">Pull requests</a></figcaption>
+</figure>
+
 H:
 
 ## Getting started
 
+1. Recorded history
+2. File states
+3. First time setup
+4. Getting help
+
+V:
+
+## Getting started
+### Recorded history
+
+<figure>
+    <img height='400' src='fig/history.png' />
+    <figcaption><a href="https://git-scm.com/book/en/v2/Getting-Started-Git-Basics">Sequence of snapshots</a></figcaption>
+</figure>
+
+V:
+
+## Getting started
+### File states
+
+A file may be in one out of three 'states':
+
+<li class="fragment"> _Committed_ -> safely stored in your local database
+<li class="fragment"> _Modified_ -> changed but not yet committed
+<li class="fragment"> _Staged_ -> prepared to go into your next commit
+
+V:
+
+## Getting started
+### File states
+
+<figure>
+    <img height='400' src='fig/areas.png' />
+    <figcaption><a href="https://git-scm.com/book/en/v2/Getting-Started-Git-Basics">Git project sections</a></figcaption>
+</figure>
+
+V:
+
+## Getting started
+### [first time setup](https://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup)
+
+<li class="fragment"> User name and email:
+
+```sh
+$ git config --global user.name Falcao
+$ git config --global user.email falcao@gmail.com
+```
+
+<li class="fragment"> much more like _editor_, _diff tool_, ...
+
+<li class="fragment"> check it:
+
+```sh
+$ git config --list
+```
+
+V:
+
+## Getting started
+### Getting help
+
+```sh
+$ git help <command>
+```
+
 H:
 
 ## Git basics
+
+
 
 H:
 
