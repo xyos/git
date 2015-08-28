@@ -208,7 +208,7 @@ V:
     <figcaption><a href="https://git-scm.com/about/distributed">Dictator and Lieutenants Workflow</a></figcaption>
 </figure>
 
-V:
+V:Working with remotes
 
 ## Introduction
 ### Why use git?: Team creativity affairs
@@ -291,12 +291,205 @@ H:
 
 ## Git basics
 
+1. Getting a repository
+2. Recording changes
+3. Viewing the commit history
+4. Undoing things
+5. Working with remotes
 
+V:
+
+## Git basics
+### Getting a repository
+
+<li class="fragment"> [Init](https://git-scm.com/book/en/v2/Git-Basics-Getting-a-Git-Repository#Initializing-a-Repository-in-an-Existing-Directory)
+```sh
+$ git init
+```
+
+<li class="fragment"> Add and commit some files
+```sh
+$ git add *.c
+$ git add LICENSE
+$ git commit -m 'initial project version'
+```
+
+V:
+
+## Git basics
+### Getting a repository
+
+<li class="fragment"> [Cloning an existing repository](https://git-scm.com/book/en/v2/Git-Basics-Getting-a-Git-Repository#Cloning-an-Existing-Repository)
+```sh
+$ git clone https://github.com/objetos/git.git
+```
+<li class="fragment"> or using a different name:
+```sh
+$ git clone https://github.com/objetos/git.git git_slides
+```
+
+V:
+
+## Git basics
+### Recording changes
+
+<figure>
+    <img height='400' src='fig/lifecycle.png' />
+    <figcaption>The lifecycle of the status of your files</figcaption>
+</figure>
+
+V:
+
+## Git basics
+### Recording changes
+
+[Checking the status of your files](https://git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository#Checking-the-Status-of-Your-Files)
+
+```sh
+$ git status
+On branch gh-pages
+Your branch is up-to-date with 'origin/gh-pages'.
+nothing to commit, working directory clean
+```
+
+V:
+
+## Git basics
+### Recording changes
+
+[Checking the status of your files](https://git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository#Checking-the-Status-of-Your-Files)
+
+Suppose you edit the ```source.md``` file:
+
+
+```sh
+$ git status
+On branch gh-pages
+Your branch is up-to-date with 'origin/gh-pages'.
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   source.md
+
+no changes added to commit (use "git add" and/or "git commit -a")
+```
+
+V:
+
+## Git basics
+### Recording changes
+
+[Checking the status of your files](https://git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository#Checking-the-Status-of-Your-Files)
+
+Suppose you create a ```fig/lifecycle.png``` file:
+
+
+```sh
+$ git status
+
+On branch gh-pages
+Your branch is up-to-date with 'origin/gh-pages'.
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   source.md
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        fig/lifecycle.png
+
+no changes added to commit (use "git add" and/or "git commit -a")
+```
+
+V:
+
+## Git basics
+### Recording changes
+
+[Tracking new files](https://git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository#Tracking-New-Files)
+
+```sh
+git add fig/lifecycle.png
+```
+
+```sh
+$ git status
+On branch gh-pages
+Your branch is up-to-date with 'origin/gh-pages'.
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        new file:   fig/lifecycle.png
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   source.md
+```
+<!-- .element: class="fragment" data-fragment-index="1"-->
+
+V:
+
+## Git basics
+### Recording changes
+
+[Commiting your changes](https://git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository#Committing-Your-Changes)
+
+```sh
+$ git commit -m 'life-cycle figure added'
+[gh-pages fa1ffed] life-cycle figure added
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 fig/lifecycle.png
+```
+
+```sh
+$ git status
+On branch gh-pages
+Your branch is ahead of 'origin/gh-pages' by 1 commit.
+  (use "git push" to publish your local commits)
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   source.md
+
+no changes added to commit (use "git add" and/or "git commit -a")
+```
+<!-- .element: class="fragment" data-fragment-index="1"-->
+
+V:
+
+## Git basics
+### Recording changes
+
+[Skipping the stagging area](https://git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository#Skipping-the-Staging-Area)
+
+V:
+
+## Git basics
+### Viewing the commit history
+
+V:
+
+## Git basics
+### Undoing things
+
+V:
+
+## Git basics
+### Working with remotes
 
 H:
 
 ## Git branching
 
+H:
+
+## Distributed git
 
 H:
 
