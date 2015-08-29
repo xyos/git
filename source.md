@@ -946,11 +946,13 @@ do so (now or later) by using -b with the checkout command again. Example:
 HEAD is now at b390e66... add bower json #1067
 ```
 
-``$ git checkout master
+```sh
+$ git checkout master
 Previous HEAD position was b390e66... add bower json #1067
 Switched to branch 'master'`sh
 
 ```
+<!-- .element: class="fragment" data-fragment-index="1"-->
 
 V:
 
@@ -958,7 +960,21 @@ V:
 
 [Pushing to Your Remotes](https://git-scm.com/book/en/v2/Git-Basics-Working-with-Remotes#Pushing-to-Your-Remotes)
 
+```git push [remote-name] [branch-name]```
 
+Example:
+
+```sh
+$ git push origin gh-pages
+Counting objects: 3, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 6.54 KiB | 0 bytes/s, done.
+Total 3 (delta 1), reused 0 (delta 0)
+To https://github.com/objetos/git.git
+   b6545c8..d203838  gh-pages -> gh-pages
+```
+<!-- .element: class="fragment" data-fragment-index="1"-->
 
 V:
 
@@ -966,11 +982,71 @@ V:
 
 [Inspecting a Remote](https://git-scm.com/book/en/v2/Git-Basics-Working-with-Remotes#Inspecting-a-Remote)
 
+```git remote show [remote-name]```
+
+Example:
+
+```sh
+$ git remote show origin
+* remote origin
+  Fetch URL: https://github.com/objetos/git.git
+  Push  URL: https://github.com/objetos/git.git
+  HEAD branch: master
+  Remote branches:
+    gh-pages tracked
+    master   tracked
+  Local branches configured for 'git pull':
+    gh-pages merges with remote gh-pages
+    master   merges with remote master
+  Local refs configured for 'git push':
+    gh-pages pushes to gh-pages (up to date)
+    master   pushes to master   (up to date)
+```
+<!-- .element: class="fragment" data-fragment-index="1"-->
+
 V:
 
 ## Git basics: Remotes
 
 [Removing and Renaming Remotes](https://git-scm.com/book/en/v2/Git-Basics-Working-with-Remotes#Removing-and-Renaming-Remotes)
+
+```git remote rename```
+
+Example:
+
+```sh
+$ git remote rename reveal rv
+```
+<!-- .element: class="fragment" data-fragment-index="1"-->
+
+```sh
+$ git remote
+origin
+rv
+```
+<!-- .element: class="fragment" data-fragment-index="2"-->
+
+V:
+
+## Git basics: Remotes
+
+[Removing and Renaming Remotes](https://git-scm.com/book/en/v2/Git-Basics-Working-with-Remotes#Removing-and-Renaming-Remotes)
+
+```git remote rm```
+
+Example:
+
+```sh
+$ git remote rm rv
+```
+<!-- .element: class="fragment" data-fragment-index="1"-->
+
+```sh
+$ git remote
+origin
+```
+<!-- .element: class="fragment" data-fragment-index="2"-->
+
 
 H:
 
