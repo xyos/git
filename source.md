@@ -97,12 +97,12 @@ V:
 
 ... in order to:
 
-1. Go back in time and recover a previous state <!-- .element: class="fragment" data-fragment-index="1"-->
- * Undo a mistake
- * Explore history
- * Make edits starting there
+1. Go back in time and check out a previous state <!-- .element: class="fragment" data-fragment-index="1"-->
+ * Recover it undoing a mistake
+ * Explore it
+ * Make edits starting from it (creating a _branched_ history)
 2. Come back to the present <!-- .element: class="fragment" data-fragment-index="2"-->
- * _merge_ other history _branches_ 
+ * _merge_ other _branches_ 
  * (or do it the other way around)
  
 V:
@@ -171,9 +171,7 @@ V:
 ## Introduction: Why use git?
 ### Private creativity affairs
 
-<li class="fragment">Whenever you wanna keep track of some project sources sequence of _main changes_
-<li class="fragment">Whenever you wanna be creative an experiment some crazy idea without fearing
-it should have been started in the past or of losing previous work
+To safely keep track of some project sources sequence of _commits_ (previous explictly recorded states)
 
 V:
 
