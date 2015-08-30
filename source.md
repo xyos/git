@@ -171,7 +171,7 @@ V:
 ## Introduction: Why use git?
 ### Private creativity affairs
 
-To safely keep track of some project sources sequence of _commits_ (previous explictly recorded states)
+To safely keep track of some project sources sequence of _commits_ (previous explicitly recorded states)
 
 V:
 
@@ -306,6 +306,8 @@ $ git commit -m 'initial project version'
 V:
 
 ## Git basics: Getting a repository
+
+From now on, I will be referring to the presentation itself git [source code repository](https://github.com/objetos/git.git)
 
 <li class="fragment"> [Cloning an existing repository](https://git-scm.com/book/en/v2/Git-Basics-Getting-a-Git-Repository#Cloning-an-Existing-Repository)
 ```sh
