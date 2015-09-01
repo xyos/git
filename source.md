@@ -298,8 +298,8 @@ $ git init
 
 <li class="fragment"> Add and commit some files
 ```sh
-$ git add *.c
-$ git add LICENSE
+$ git add *.md
+$ git add fig/
 $ git commit -m 'initial project version'
 ```
 
@@ -335,6 +335,7 @@ V:
 
 ```sh
 $ git status
+
 On branch gh-pages
 Your branch is up-to-date with 'origin/gh-pages'.
 nothing to commit, working directory clean
