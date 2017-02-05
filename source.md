@@ -179,7 +179,7 @@ V:
 ### Team creativity affairs
 
 <figure>
-    <img height='400' src='fig/svn_workflow.png' />
+    <img height='380' src='fig/svn_workflow.png' />
     <figcaption><a href="https://git-scm.com/about/distributed">Subversion-Style Workflow</a></figcaption>
 </figure>
 
@@ -193,7 +193,7 @@ V:
 ### Team creativity affairs
 
 <figure>
-    <img height='400' src='fig/manager_workflow.png' />
+    <img height='380' src='fig/manager_workflow.png' />
     <figcaption><a href="https://git-scm.com/about/distributed">Integration Manager Workflow</a></figcaption>
 </figure>
 
@@ -212,7 +212,7 @@ V:
 ### Team creativity affairs
 
 <figure>
-    <img height='400' src='fig/dictator_workflow.png' />
+    <img height='380' src='fig/dictator_workflow.png' />
     <figcaption><a href="https://git-scm.com/about/distributed">Dictator and Lieutenants Workflow</a></figcaption>
 </figure>
 
@@ -229,7 +229,7 @@ V:
 ### Team creativity affairs
 
 <figure>
-    <img height='400' src='fig/pull_request.png' />
+    <img height='260' src='fig/pull_request.png' />
     <figcaption><a href="https://help.github.com/articles/using-pull-requests/">Pull requests</a></figcaption>
 </figure>
 
@@ -389,7 +389,7 @@ V:
 
 [Viewing your staged and unstaged changes](https://git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository#Viewing-Your-Staged-and-Unstaged-Changes)
 
-To see what you???ve changed but not yet staged:
+To see what you've changed but not yet staged:
 
 ```sh
 $ git diff
@@ -406,7 +406,7 @@ V:
 
 [Viewing your staged and unstaged changes](https://git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository#Viewing-Your-Staged-and-Unstaged-Changes)
 
-To see what you???ve _staged_ that will go into your next commit
+To see what you've _staged_ that will go into your next commit
 
 ```sh
 $ git diff --staged 
@@ -737,7 +737,7 @@ Common options to git log
 | --name-only     | Show the list of files modified after the commit information.                                                                      |
 | --name-status   | Show the list of files affected with added/modified/deleted information as well.                                                   |
 | --abbrev-commit | Show only the first few characters of the SHA-1 checksum instead of all 40.                                                        |
-| --relative-date | Display the date in a relative format (for example, ???2 weeks ago???) instead of using the full date format.                          |
+| --relative-date | Display the date in a relative format (for example, 2 weeks ago) instead of using the full date format.                          |
 | --graph         | Display an ASCII graph of the branch and merge history beside the log output.                                                      |
 | --pretty        | Show commits in an alternate format. Options include oneline, short, full, fuller, and format (where you specify your own format). |
 
