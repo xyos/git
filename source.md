@@ -896,6 +896,12 @@ Changes not staged for commit:
 no changes added to commit (use "git add" and/or "git commit -a")
 ```
 
+V:
+
+## Git basics: Undoing things
+
+[Unmodifying a Modified File](https://git-scm.com/book/en/v2/Git-Basics-Undoing-Things#Unmodifying-a-Modified-File)
+
 ```sh
 git checkout -- source.md
 ```
