@@ -31,7 +31,6 @@ H:
  2. Getting started <!-- .element: class="fragment" data-fragment-index="2"-->
  3. Git basics <!-- .element: class="fragment" data-fragment-index="3"-->
  3. Git branching <!-- .element: class="fragment" data-fragment-index="4"-->
- 4. Distributed git  <!-- .element: class="fragment" data-fragment-index="5"-->
  5. References <!-- .element: class="fragment" data-fragment-index="6"-->
  6. Workshop <!-- .element: class="fragment" data-fragment-index="7"-->
  
@@ -184,6 +183,10 @@ V:
     <figcaption><a href="https://git-scm.com/about/distributed">Subversion-Style Workflow</a></figcaption>
 </figure>
 
+N:
+
+Works like subversion
+
 V:
 
 ## Introduction: Why use git?
@@ -193,6 +196,15 @@ V:
     <img height='380' src='fig/manager_workflow.png' />
     <figcaption><a href="https://git-scm.com/about/distributed">Integration Manager Workflow</a></figcaption>
 </figure>
+
+N:
+
+1. The project maintainer pushes to their public repository
+1. A contributor clones that repository and makes changes
+1. The contributor pushes to their own public copy
+1. The contributor sends the maintainer an email asking them to pull changes
+1. The maintainer adds the contributor’s repo as a remote and merges locally
+1. The maintainer pushes merged changes to the main repository
 
 V:
 
@@ -204,7 +216,14 @@ V:
     <figcaption><a href="https://git-scm.com/about/distributed">Dictator and Lieutenants Workflow</a></figcaption>
 </figure>
 
-V:Working with remotes
+N:
+
+1. Regular developers work on their topic branch and rebase their work on top of master. The master branch is that of the reference directory to which the dictator pushes
+1. Lieutenants merge the developers' topic branches into their master branch
+1. The dictator merges the lieutenants' master branches into their master branch
+1. The dictator pushes their master to the reference repository so the other developers can rebase on it
+
+V:
 
 ## Introduction: Why use git?
 ### Team creativity affairs
@@ -1094,9 +1113,171 @@ H:
 
 ## Git branching
 
-H:
+1. [Basic Branching](https://git-scm.com/book/en/v2/Git-Branching-Basic-Branching-and-Merging)
+1. [Basic Merging](https://git-scm.com/book/en/v2/Git-Branching-Basic-Branching-and-Merging)
 
-## Distributed git
+V:
+
+## Git branching: Intro
+
+> Working on this presentation
+
+1. *Create a branch* _struct_
+1. Do some work in that branch
+
+V:
+
+## Git branching: Intro
+
+> Working on this presentation
+
+At this stage, you’d like to fix the formatting. You’ll do the following:
+
+1. Switch to your production branch
+1. Create a branch to do the _formatting_
+1. After it’s tested, *merge* the _formatting_ branch
+1. Switch back to _struct_ story and continue working
+
+V:
+
+## Git branching: Basic Branching
+
+> Create the _struct_ branch
+
+```sh
+$ git checkout -b struct
+```
+<!-- .element: class="fragment" data-fragment-index="1"-->
+
+```sh
+$ git status
+On branch struct
+nothing to commit, working tree clean
+```
+<!-- .element: class="fragment" data-fragment-index="2"-->
+
+V: 
+
+## Git branching: Basic Branching
+
+> Do some work in the _struct_ branch
+
+```sh
+$ git checkout status
+On branch struct
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   source.md
+```
+
+V:
+
+## Git branching: Basic Branching
+
+> Create the _formatting_ branch
+
+... but first finish work on _struct_ branch
+
+```sh
+$ git checkout gh-pages 
+error: Your local changes to the following files would be overwritten by checkout:
+        source.md
+Please commit your changes or stash them before you switch branches.
+Aborting
+```
+<!-- .element: class="fragment" data-fragment-index="1"-->
+
+```sh
+$ git commit -am'more updated'
+[struct 798cdbe] more updated
+ 1 file changed, 51 insertions(+), 5 deletions(-)
+```
+<!-- .element: class="fragment" data-fragment-index="2"-->
+
+V:
+
+## Git branching: Basic Branching
+
+> Create the _formatting_ branch
+
+```sh
+$ git checkout gh-pages 
+Switched to branch 'gh-pages'
+Your branch is up-to-date with 'origin/gh-pages'.
+```
+<!-- .element: class="fragment" data-fragment-index="1"-->
+
+```sh
+$ git checkout -b formatting
+```
+<!-- .element: class="fragment" data-fragment-index="2"-->
+
+V: 
+
+## Git branching: Basic Branching
+
+> Do some work in the _formatting_ branch
+
+```sh
+$ git checkout status
+On branch formatting
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   source.md
+```
+<!-- .element: class="fragment" data-fragment-index="1"-->
+
+```sh
+$ git commit -am'formatting done'
+[formatting 587456f] formatting done
+ 1 file changed, 68 insertions(+), 28 deletions(-)
+```
+<!-- .element: class="fragment" data-fragment-index="2"-->
+
+V: 
+
+## Git branching: Basic Merging
+
+> Merge the _formatting_ branch onto the _master_
+
+```sh
+$ git checkout master
+Switched to branch 'master'
+Your branch is up-to-date with 'origin/master'.
+```
+<!-- .element: class="fragment" data-fragment-index="1"-->
+
+```sh
+$ git merge formatting 
+Updating b6b37b5..587456f
+Fast-forward
+ source.md | 96 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++----------------------------
+ 1 file changed, 68 insertions(+), 28 deletions(-)
+```
+<!-- .element: class="fragment" data-fragment-index="2"-->
+
+V: 
+
+## Git branching: Basic Merging
+
+> Merge the _struct_ branch onto the _master_
+
+```sh
+$ git checkout struct
+Switched to branch 'struct'
+```
+
+finish the work in the strcut branch
+
+```sh
+$ git commit -am'dev workflows notes'
+[struct 1a13f5a] dev workflows notes
+ 1 file changed, 72 insertions(+), 17 deletions(-)
+```
 
 H:
 
