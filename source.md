@@ -1113,6 +1113,55 @@ Changes not staged for commit:
         modified:   source.md
 ```
 
+V:
+
+## Git branching: Basic Branching
+
+> Create the _formatting_ branch
+
+```sh
+$ git checkout gh-pages 
+error: Your local changes to the following files would be overwritten by checkout:
+        source.md
+Please commit your changes or stash them before you switch branches.
+Aborting
+```
+<!-- .element: class="fragment" data-fragment-index="1"-->
+
+```sh
+$ git commit -am'more updated'
+```
+<!-- .element: class="fragment" data-fragment-index="1"-->
+
+
+```sh
+$ git checkout gh-pages 
+error: Your local changes to the following files would be overwritten by checkout:
+        source.md
+Please commit your changes or stash them before you switch branches.
+Aborting
+```
+<!-- .element: class="fragment" data-fragment-index="2"-->
+
+V:
+
+## Git branching: Basic Branching
+
+> Create the _formatting_ branch
+
+
+```sh
+$ git checkout gh-pages 
+Switched to branch 'gh-pages'
+Your branch is up-to-date with 'origin/gh-pages'.
+```
+<!-- .element: class="fragment" data-fragment-index="1"-->
+
+```sh
+$ git checkout -b formatting
+```
+<!-- .element: class="fragment" data-fragment-index="2"-->
+
 V: 
 
 ## Git branching: Basic Branching
@@ -1120,16 +1169,13 @@ V:
 > Do some work in the _struct_ branch
 
 ```sh
-$ git commit -am'contents added to the new branch'
-[struct b3874fa] contents added to the new branch
- 1 file changed, 61 insertions(+)
+
 ```
 <!-- .element: class="fragment" data-fragment-index="1"-->
 
 ```sh
 $ git status
-On branch struct
-nothing to commit, working tree clean
+
 ```
 <!-- .element: class="fragment" data-fragment-index="2"-->
 
