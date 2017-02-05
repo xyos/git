@@ -1234,8 +1234,9 @@ Switched to branch 'struct'
 finish the work in the strcut branch
 
 ```sh
-$ git checkout struct
-Switched to branch 'struct'
+$ git commit -am'dev workflows notes'
+[struct 1a13f5a] dev workflows notes
+ 1 file changed, 72 insertions(+), 17 deletions(-)
 ```
 
 H:
