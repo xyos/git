@@ -1242,12 +1242,11 @@ V:
 
 ## Git branching: Basic Merging
 
-> Merge the _formatting_ branch onto the _master_
+> Merge the _formatting_ branch onto the _gh-pages_
 
 ```sh
-$ git checkout master
-Switched to branch 'master'
-Your branch is up-to-date with 'origin/master'.
+$ git checkout gh-pages
+Switched to branch 'gh-pages'
 ```
 <!-- .element: class="fragment" data-fragment-index="1"-->
 
@@ -1264,7 +1263,7 @@ V:
 
 ## Git branching: Basic Merging
 
-> Merge the _struct_ branch onto the _master_
+> Merge the _struct_ branch onto the _gh-pages_
 
 ```sh
 $ git checkout struct
