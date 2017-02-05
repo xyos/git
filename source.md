@@ -1054,6 +1054,67 @@ H:
 
 ## Git branching
 
+1. [Basic Branching](https://git-scm.com/book/en/v2/Git-Branching-Basic-Branching-and-Merging)
+1. [Basic Merging](https://git-scm.com/book/en/v2/Git-Branching-Basic-Branching-and-Merging)
+
+V:
+
+## Git branching: Intro
+
+> Working on this presentation
+
+1. *Create a branch* _struct_
+1. Do some work in that branch
+
+V:
+
+## Git branching: Intro
+
+> Working on this presentation
+
+At this stage, you’d like to fix the formatting. You’ll do the following:
+
+1. Switch to your production branch
+1. Create a branch to do the _formatting_
+1. After it’s tested, *merge* the _formatting_ branch
+1. Switch back to _struct_ story and continue working
+
+V:
+
+## Git branching: Basic Branching
+
+> Create the _struct_ branch
+
+```sh
+$ git checkout -b struct
+```
+<!-- .element: class="fragment" data-fragment-index="1"-->
+
+```sh
+$ git status
+On branch struct
+nothing to commit, working tree clean
+```
+<!-- .element: class="fragment" data-fragment-index="2"-->
+
+V: 
+
+## Git branching: Basic Branching
+
+> Do some work in the _struct_ branch
+
+```sh
+$ git checkout status
+On branch struct
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   source.md
+```
+<!-- .element: class="fragment" data-fragment-index="1"-->
+
+
 H:
 
 ## Distributed git
