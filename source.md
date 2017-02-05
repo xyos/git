@@ -858,7 +858,14 @@ M       source.md
 ```
 <!-- .element: class="fragment" data-fragment-index="2"-->
 
+V:
+
+## Git basics: Undoing things
+
+[Unstaging a Staged File](https://git-scm.com/book/en/v2/Git-Basics-Undoing-Things#Unstaging-a-Staged-File)
+
 ```sh
+$ git status
 On branch gh-pages
 Your branch is up-to-date with 'origin/gh-pages'.
 Changes not staged for commit:
@@ -869,7 +876,6 @@ Changes not staged for commit:
 
 no changes added to commit (use "git add" and/or "git commit -a")
 ```
-<!-- .element: class="fragment" data-fragment-index="3"-->
 
 V:
 
@@ -939,8 +945,6 @@ V:
 [Adding Remote Repositories](https://git-scm.com/book/en/v2/Git-Basics-Working-with-Remotes#Adding-Remote-Repositories)
 
 ```git remote add [shortname] [url]```
-
-Example:
 
 ```sh
 $ git remote add reveal https://github.com/hakimel/reveal.js.git
@@ -1018,8 +1022,6 @@ V:
 
 ```git push [remote-name] [branch-name]```
 
-Example:
-
 ```sh
 $ git push origin gh-pages
 Counting objects: 3, done.
@@ -1039,8 +1041,6 @@ V:
 [Inspecting a Remote](https://git-scm.com/book/en/v2/Git-Basics-Working-with-Remotes#Inspecting-a-Remote)
 
 ```git remote show [remote-name]```
-
-Example:
 
 ```sh
 $ git remote show origin
@@ -1068,8 +1068,6 @@ V:
 
 ```git remote rename```
 
-Example:
-
 ```sh
 $ git remote rename reveal rv
 ```
@@ -1089,8 +1087,6 @@ V:
 [Removing and Renaming Remotes](https://git-scm.com/book/en/v2/Git-Basics-Working-with-Remotes#Removing-and-Renaming-Remotes)
 
 ```git remote rm```
-
-Example:
 
 ```sh
 $ git remote rm rv
