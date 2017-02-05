@@ -1112,8 +1112,26 @@ Changes not staged for commit:
 
         modified:   source.md
 ```
+
+V: 
+
+## Git branching: Basic Branching
+
+> Do some work in the _struct_ branch
+
+```sh
+$ git commit -am'contents added to the new branch'
+[struct b3874fa] contents added to the new branch
+ 1 file changed, 61 insertions(+)
+```
 <!-- .element: class="fragment" data-fragment-index="1"-->
 
+```sh
+$ git status
+On branch struct
+nothing to commit, working tree clean
+```
+<!-- .element: class="fragment" data-fragment-index="2"-->
 
 H:
 
