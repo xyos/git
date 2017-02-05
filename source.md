@@ -179,7 +179,7 @@ V:
 ### Team creativity affairs
 
 <figure>
-    <img height='380' src='fig/svn_workflow.png' />
+    <img height='400' src='fig/svn_workflow.png' />
     <figcaption><a href="https://git-scm.com/about/distributed">Subversion-Style Workflow</a></figcaption>
 </figure>
 
@@ -193,7 +193,7 @@ V:
 ### Team creativity affairs
 
 <figure>
-    <img height='380' src='fig/manager_workflow.png' />
+    <img height='400' src='fig/manager_workflow.png' />
     <figcaption><a href="https://git-scm.com/about/distributed">Integration Manager Workflow</a></figcaption>
 </figure>
 
@@ -212,7 +212,7 @@ V:
 ### Team creativity affairs
 
 <figure>
-    <img height='380' src='fig/dictator_workflow.png' />
+    <img height='400' src='fig/dictator_workflow.png' />
     <figcaption><a href="https://git-scm.com/about/distributed">Dictator and Lieutenants Workflow</a></figcaption>
 </figure>
 
@@ -229,7 +229,7 @@ V:
 ### Team creativity affairs
 
 <figure>
-    <img height='260' src='fig/pull_request.png' />
+    <img height='400' src='fig/pull_request.png' />
     <figcaption><a href="https://help.github.com/articles/using-pull-requests/">Pull requests</a></figcaption>
 </figure>
 
@@ -389,7 +389,7 @@ V:
 
 [Viewing your staged and unstaged changes](https://git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository#Viewing-Your-Staged-and-Unstaged-Changes)
 
-To see what you've changed but not yet staged:
+To see what you???ve changed but not yet staged:
 
 ```sh
 $ git diff
@@ -406,7 +406,7 @@ V:
 
 [Viewing your staged and unstaged changes](https://git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository#Viewing-Your-Staged-and-Unstaged-Changes)
 
-To see what you've _staged_ that will go into your next commit
+To see what you???ve _staged_ that will go into your next commit
 
 ```sh
 $ git diff --staged 
@@ -686,35 +686,17 @@ Useful options for ```git log --pretty=format```
 | %T     | Tree hash                                       |
 | %t     | Abbreviated tree hash                           |
 | %P     | Parent hashes                                   |
-
-
-V:
-
-## Git basics: Viewing the history
-
-Useful options for ```git log --pretty=format```
-
-| Option | Description output                              |
-|--------|-------------------------------------------------|
 | %p     | Abbreviated parent hashes                       |
 | %an    | Author name                                     |
 | %ae    | Author email                                    |
 | %ad    | Author date (format respects the --date=option) |
 | %ar    | Author date, relative                           |
-
-V:
-
-## Git basics: Viewing the history
-
-Useful options for ```git log --pretty=format```
-
-| Option | Description output                              |
-|--------|-------------------------------------------------|
 | %cn    | Committer name                                  |
 | %ce    | Committer email                                 |
 | %cd    | Committer date                                  |
 | %cr    | Committer date, relative                        |
 | %s     | Subject                                         |
+
 
 V:
 
@@ -749,24 +731,16 @@ Common options to git log
 
 | Option          | Description                                                                                                                        |
 |-----------------|------------------------------------------------------------------------------------------------------------------------------------|
-| -p              | Show the patch introduced with each commit                                                                                         |
-| --stat          | Show statistics for files modified in each commit                                                                                  |
-| --shortstat     | Display only the changed/insertions/deletions line from the --stat command                                                         |
-| --name-only     | Show the list of files modified after the commit information                                                                       |
-| --name-status   | Show the list of files affected with added/modified/deleted information as well                                                    |
+| -p              | Show the patch introduced with each commit.                                                                                        |
+| --stat          | Show statistics for files modified in each commit.                                                                                 |
+| --shortstat     | Display only the changed/insertions/deletions line from the --stat command.                                                        |
+| --name-only     | Show the list of files modified after the commit information.                                                                      |
+| --name-status   | Show the list of files affected with added/modified/deleted information as well.                                                   |
+| --abbrev-commit | Show only the first few characters of the SHA-1 checksum instead of all 40.                                                        |
+| --relative-date | Display the date in a relative format (for example, ???2 weeks ago???) instead of using the full date format.                          |
+| --graph         | Display an ASCII graph of the branch and merge history beside the log output.                                                      |
+| --pretty        | Show commits in an alternate format. Options include oneline, short, full, fuller, and format (where you specify your own format). |
 
-V:
-
-## Git basics: Viewing the history
-
-Common options to git log
-
-| Option          | Description                                                                                                                        |
-|-----------------|------------------------------------------------------------------------------------------------------------------------------------|
-| --abbrev-commit | Show only the first few characters of the SHA-1 checksum instead of all 40                                                         |
-| --relative-date | Display the date in a relative format (for example, 2 weeks ago) instead of using the full date format                             |
-| --graph         | Display an ASCII graph of the branch and merge history beside the log output                                                       |
-| --pretty        | Show commits in an alternate format. Options include oneline, short, full, fuller, and format (where you specify your own format)  |
 
 V:
 
@@ -796,19 +770,10 @@ Options to limit the output of git log
 | Option            | Description                                                                  |
 |-------------------|------------------------------------------------------------------------------|
 | -(n)              | Show only the last n commits                                                 |
-| --since, --after  | Limit the commits to those made after the specified date                     |
-| --until, --before | Limit the commits to those made before the specified date                    |
-
-V:
-
-## Git basics: Viewing the history
-
-Options to limit the output of git log
-
-| Option            | Description                                                                  |
-|-------------------|------------------------------------------------------------------------------|
-| --author          | Only show commits in which the author entry matches the specified string     |
-| --committer       | Only show commits in which the committer entry matches the specified string  |
+| --since, --after  | Limit the commits to those made after the specified date.                    |
+| --until, --before | Limit the commits to those made before the specified date.                   |
+| --author          | Only show commits in which the author entry matches the specified string.    |
+| --committer       | Only show commits in which the committer entry matches the specified string. |
 | --grep            | Only show commits with a commit message containing the string                |
 | -S                | Only show commits adding or removing code matching the string                |
 
@@ -858,14 +823,7 @@ M       source.md
 ```
 <!-- .element: class="fragment" data-fragment-index="2"-->
 
-V:
-
-## Git basics: Undoing things
-
-[Unstaging a Staged File](https://git-scm.com/book/en/v2/Git-Basics-Undoing-Things#Unstaging-a-Staged-File)
-
 ```sh
-$ git status
 On branch gh-pages
 Your branch is up-to-date with 'origin/gh-pages'.
 Changes not staged for commit:
@@ -876,6 +834,7 @@ Changes not staged for commit:
 
 no changes added to commit (use "git add" and/or "git commit -a")
 ```
+<!-- .element: class="fragment" data-fragment-index="3"-->
 
 V:
 
@@ -895,12 +854,6 @@ Changes not staged for commit:
 
 no changes added to commit (use "git add" and/or "git commit -a")
 ```
-
-V:
-
-## Git basics: Undoing things
-
-[Unmodifying a Modified File](https://git-scm.com/book/en/v2/Git-Basics-Undoing-Things#Unmodifying-a-Modified-File)
 
 ```sh
 git checkout -- source.md
@@ -1052,6 +1005,8 @@ V:
 
 ```git remote show [remote-name]```
 
+Example:
+
 ```sh
 $ git remote show origin
 * remote origin
@@ -1078,6 +1033,8 @@ V:
 
 ```git remote rename```
 
+Example:
+
 ```sh
 $ git remote rename reveal rv
 ```
@@ -1098,6 +1055,8 @@ V:
 
 ```git remote rm```
 
+Example:
+
 ```sh
 $ git remote rm rv
 ```
@@ -1108,6 +1067,7 @@ $ git remote
 origin
 ```
 <!-- .element: class="fragment" data-fragment-index="2"-->
+
 
 H:
 
@@ -1265,17 +1225,65 @@ V:
 
 > Merge the _struct_ branch onto the _gh-pages_
 
+finish the work in the struct branch first...
+
 ```sh
 $ git checkout struct
 Switched to branch 'struct'
 ```
-
-finish the work in the strcut branch
+<!-- .element: class="fragment" data-fragment-index="1"-->
 
 ```sh
 $ git commit -am'dev workflows notes'
 [struct 1a13f5a] dev workflows notes
  1 file changed, 72 insertions(+), 17 deletions(-)
+```
+<!-- .element: class="fragment" data-fragment-index="2"-->
+
+V: 
+
+## Git branching: Basic Merging
+
+> Merge the _struct_ branch onto the _gh-pages_
+
+... now merge
+
+```sh
+$ git checkout gh-pages 
+Switched to branch 'gh-pages'
+Your branch is ahead of 'origin/gh-pages' by 1 commit.
+  (use "git push" to publish your local commits)
+```
+<!-- .element: class="fragment" data-fragment-index="1"-->
+
+```sh
+$ git merge struct 
+Auto-merging source.md
+Merge made by the 'recursive' strategy.
+ source.md | 189 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++----
+ 1 file changed, 185 insertions(+), 4 deletions(-)
+```
+<!-- .element: class="fragment" data-fragment-index="2"-->
+
+V: 
+
+## Git branching: Basic Merging
+
+final result
+
+```sh
+$ git log --graph --pretty=oneline
+* 7bd70d280d32fcdde1490aac8a57bbd33fac3d76 more updates
+*   f70757509b3aa4d5d3e5e5cb4ade636461c4ca11 Merge branch 'struct' into gh-pages
+|\  
+| * b35c44b4e739801041bb372b60ca7341511a6d5a dev workflows notes
+| * 1a13f5a34929e1a3ba10772bd3aea327e1eb5f9f dev workflows notes
+| * 5cedde5d9995b11f40007adb6d29b11d564b816c more updated
+| * 798cdbe61f66bb3b1807a97168211ab5e2b89098 more updated
+| * b3874fa1e8fae62647265bcc76b7f6ee613b15de contents added to the new branch
+* | 587456f1b4d7817cfac4c8c7319cfb6cf30c78eb formatting done
+|/  
+* b6b37b560dc39664bee74b60a6f6a63bc538e44a index and source updated to latest reveal
 ```
 
 H:
