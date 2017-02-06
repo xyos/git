@@ -31,6 +31,7 @@ H:
  2. Getting started <!-- .element: class="fragment" data-fragment-index="2"-->
  3. Git basics <!-- .element: class="fragment" data-fragment-index="3"-->
  3. Git branching <!-- .element: class="fragment" data-fragment-index="4"-->
+ 3. Github-based projects <!-- .element: class="fragment" data-fragment-index="5"-->
  5. References <!-- .element: class="fragment" data-fragment-index="6"-->
  6. Workshop <!-- .element: class="fragment" data-fragment-index="7"-->
  
@@ -1322,6 +1323,15 @@ $ git log --graph --pretty=oneline
 |/  
 * b6b37b560dc39664bee74b60a6f6a63bc538e44a index and source updated to latest reveal
 ```
+
+H:
+
+## Github-based projects
+
+<li class="fragment"> [Classroom](https://classroom.github.com/videos)
+<li class="fragment"> [Github pages](https://pages.github.com/), see also [Top Open-Source Static Site Generators](https://www.staticgen.com/)
+<li class="fragment"> [Gollum](https://github.com/gollum/gollum)
+<li class="fragment"> [Gibook](https://www.gitbook.com/)
 
 H:
 
